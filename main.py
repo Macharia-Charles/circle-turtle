@@ -3,17 +3,13 @@ globals()
 mash_turtle = turtle.Turtle()
 
 
-def draw_square():
-    mash_turtle.speed(5)
-    mash_turtle.forward(100)
-    mash_turtle.right(90)
-    mash_turtle.forward(100)
-    mash_turtle.right(90)
-    mash_turtle.forward(100)
-    mash_turtle.right(90)
-    mash_turtle.forward(100)
+def draw_square(length, angle):
+    for turn in range(4):
+        mash_turtle.speed(5)
+        mash_turtle.forward(length)
+        mash_turtle.right(angle)
 
 
-for i in range(36):
-    draw_square()
-    mash_turtle.right(100)
+for i in range(37):
+    draw_square(100, 90)
+    mash_turtle.right(10)
